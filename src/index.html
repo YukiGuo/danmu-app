@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>发弹幕</title>
 </head>
 <style>
     * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+
     }
 
     .container {
@@ -24,12 +25,15 @@
         line-height: 60px;
     }
 
-    .screen {
-        position: relative;
+    .wrap {
         width: 100%;
         height: 100%;
         border: solid #ccc 1px;
         overflow: hidden;
+    }
+
+    .screen {
+        position: relative;
     }
 
     .foot {
@@ -57,7 +61,7 @@
 
     .danmu {
         position: absolute;
-
+        padding: 0;
     }
 
     @keyframes move {
@@ -74,13 +78,18 @@
 <body>
     <div class="container">
         <h3> 欢迎来到我的弹幕试炼场!</h3>
-        <div class="screen"></div>
+        <div class="wrap">
+            <div class="screen"></div>
+        </div>
         <div class="foot">
             <div></div>
-            <input class="content" type="text">
+            <input class="content" type="text" placeholder="随便说点什么吧？">
             <div>
                 <button class="shoot">发射</button>
+                <button class="close">关闭弹幕</button>
+                <button class="open">开启弹幕</button>
                 <button class="clear">清屏</button>
+
             </div>
 
         </div>
